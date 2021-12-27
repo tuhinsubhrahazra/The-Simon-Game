@@ -74,8 +74,8 @@ body{
   }
 
   .btn{
-    width: 240px;
-    height: 240px;
+    width: 300px;
+    height: 300px;
     border-radius: 30px;
     border-color: black;
     border-width: 8px;
@@ -92,8 +92,8 @@ body{
   }
 
   .startButton{
-    width: 200px;
-    height: 80px;
+    width: 250px;
+    height: 120px;
     background-color: #F3C892;
     margin-left: auto;
     margin-right: auto;
