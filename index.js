@@ -65,7 +65,7 @@ function check(len){
     }
   }
   else{
-    $(".heading").text("Game over Press A key to restart");
+    $(".heading").text("Game over Press A to restart");
     $("body").addClass("gameOver");
     var audio = new Audio("sounds/wrong.mp3");
     audio.play();
