@@ -4,6 +4,12 @@ var gameArray = [];
 var inputArray = [];
 var timeoutSec = 200;
 
+$(".startButton").click(function () {
+  if (!isGamestart) {
+    startGame();
+  }
+})
+
 $(document).keypress(function (event) {
   if (!isGamestart && event.key === "a") {
     startGame();
@@ -14,7 +20,7 @@ function startGame() {
   isGamestart = true;
   inputArray = [];
   i++;
-  $("h1").text("Level"+i);
+  $(".heading").text("Level "+i);
   var random =Math.floor(Math.random()*4)+1;
   gameArray.push(random);
   setTimeout(function () {
@@ -59,7 +65,7 @@ function check(len){
     }
   }
   else{
-    $("h1").text("Game over Press any key to start");
+    $(".heading").text("Game over Press A key to restart");
     $("body").addClass("gameOver");
     var audio = new Audio("sounds/wrong.mp3");
     audio.play();
@@ -75,12 +81,12 @@ function startOver() {
   gameArray = [];
   inputArray = [];
   isGamestart = false;
-  $(document).keypress(function () {
-    if (!isGamestart) {
-      startGame();
-      isGamestart = true;
-    }
-  })
+  // $(document).keypress(function () {
+  //   if (!isGamestart) {
+  //     startGame();
+  //     isGamestart = true;
+  //   }
+  // })
 }
 
 function buttonpress(p) {
